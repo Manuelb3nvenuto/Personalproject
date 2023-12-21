@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        Cart Quantity</head>
+    <style>
+        .red-button {
+            background-color: red;
+            color:aliceblue;
+            border-color: none;
+        }
+    
+        .yellow-button {
+            background-color: yellow;
+            color: black;
+            border-color: none;
+        }
+        
+        .orange-button {
+            background-color: orange;
+            color: black;
+            border-color: none;
+        }
+    </style>
+    
+</head>
+<body>
+   <br> </br> <button title="Show quantity" class="yellow-button" onclick="console.log(`Cart quantity : ${cartQuantity}`)""; > Show quantity </button>
+
+    <button onclick="cartQuantity = cartQuantity + 1; console.log(`Cart quantity : ${cartQuantity}`);" title="Add to cart" class="orange-button"> Add Cart </button>
+
+    <button onclick="cartQuantity = cartQuantity + 2; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+2</button>
+
+
+    <button onclick="cartQuantity = cartQuantity + 3; console.log(`Cart quantity : ${cartQuantity}`);" class="tres">+3</button>
+
+    <button type="reset">Reset cart</button>
+
+
+    <script>
+
+        let cartQuantity = 0;
+
+        let dos = cartQuantity + 2;
+
+        let tres = cartQuantity + 3;
+
+    </script> 
+</body>
+</html>
