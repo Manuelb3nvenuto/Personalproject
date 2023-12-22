@@ -29,12 +29,12 @@
 <body>
    <br> </br> <button title="Show quantity" class="yellow-button" onclick="console.log(`Cart quantity : ${cartQuantity}`)""; > Show quantity </button>
 
-    <button onclick="cartQuantity = cartQuantity + 1; console.log(`Cart quantity : ${cartQuantity}`);" title="Add to cart" class="orange-button"> Add Cart </button>
+    <button onclick="cartQuantity ++; console.log(`Cart quantity : ${cartQuantity}`);" title="Add to cart" class="orange-button"> Add Cart </button>
 
-    <button onclick="cartQuantity = cartQuantity + 2; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+2</button>
+    <button onclick="cartQuantity += 2; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+2</button>
 
 
-    <button onclick="cartQuantity = cartQuantity + 3; console.log(`Cart quantity : ${cartQuantity}`);" class="tres">+3</button>
+    <button onclick="cartQuantity += 3; console.log(`Cart quantity : ${cartQuantity}`);" class="tres">+3</button>
 
     <button onclick = "cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity : ${cartQuantity}`);" type="reset">Reset cart</button>
 
@@ -42,11 +42,8 @@
     <script>
 
         let cartQuantity = 0;
+        
 
-        let dos = cartQuantity + 2;
-
-        let tres = cartQuantity + 3;
-
-    </script> 
+</script> 
 </body>
 </html>
