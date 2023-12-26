@@ -6,7 +6,10 @@
     <title>Ejercicios</title>
 </head>
 <body>
-    <script>
+
+
+    <button onclick="beforenum(afternum)">Dar numero</button>
+    <script>/*
 
         const cost = 5 + (2 * 3) + 9;
         console.log(`Cost of the food: $${cost}`);
@@ -17,7 +20,26 @@
 
         console.log(`The cost with taxes it's: $${tax}`);
 
-        console.log(`The total it's gonna be: $${totalCost}`);
+        console.log(`The total it's gonna be: $${totalCost}`);*/
+
+
+        //Practicing functions
+
+        
+        function beforenum(){
+            const dar = afternum();
+            console.log('te daré el numero:  ' + dar);
+        }
+
+        function afternum(){
+            let afternum = 4;
+            return afternum;
+        };
+
+
+
+        
+
 
     </script>
 </body>
