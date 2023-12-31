@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+          const product = {
+            name : 'socks',
+            price : 1090,
+          };
+
+          console.log(product.name);
+          console.log(product.price);
+          // the name of the objects can be change continupusly
+          product.name = 'la vida de los calcetines';
+          console.log(product.name);
+          // typing a property that doesnt exist
+          product.newProperty = true;
+          console.log(product);
+
+          delete product.newProperty;
+
+          console.log(product);
+          //we can save an object inside a variable, an also console.log object and delete them
+          //Objects make the code mor organized, we use multiple values and display them at ones
+
+
+    </script>
+</body>
+</html>
