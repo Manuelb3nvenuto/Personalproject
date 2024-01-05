@@ -28,24 +28,24 @@
           //Objects make the code mor organized, we use multiple values and display them at ones*/
 
           const producto = {
-            name: "shirt", ['delivery-time']: '1 day'
-          };
-
-          const rating = {
+            name: "shirt", ['delivery-time']: '1 day',
+            rating: {
             stars: 5,
             size: 8.9,
+          }, //You can make a function inside an object, functions are also values that can be save in objects
+          fun: function funcion1(){ //this it's called method
+            console.log('function it`s an object')
           }
+        };
+
+
+
           console.log(producto);
           console.log(producto.name);
           console.log(producto['name']);
           console.log(producto['delivery-time']);
-
-          console.log(rating.size);
-
-
-
-
-
+          console.log(producto.rating.size);
+          producto.fun();
     </script>
 </body>
 </html>
