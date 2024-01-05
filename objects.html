@@ -46,6 +46,14 @@
           console.log(producto['delivery-time']);
           console.log(producto.rating.size);
           producto.fun();
-    </script>
+
+          console.log(typeof console.log);
+
+          //Build in projects\\ we can put objects of java and convert them into json || JSON dont support funtions
+          console.log(typeof JSON.stringify(producto));
+          //SJON.PARSE
+          const jsonString = JSON.stringify(producto);
+          console.log(JSON.parse(jsonString));    //WITH THIS CAN CONVERT BACK AND FORTH Javascript Object => JSON
+          </script>
 </body>
 </html>
