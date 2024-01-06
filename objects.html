@@ -26,7 +26,7 @@
           console.log(product);
           //we can save an object inside a variable, an also console.log object and delete them
           //Objects make the code mor organized, we use multiple values and display them at ones*/
-
+          /*
           const producto = {
             name: "shirt", ['delivery-time']: '1 day',
             rating: {
@@ -54,6 +54,51 @@
           //SJON.PARSE
           const jsonString = JSON.stringify(producto);
           console.log(JSON.parse(jsonString));    //WITH THIS CAN CONVERT BACK AND FORTH Javascript Object => JSON
+          */
+         const object1 = {
+          message: 'hello',
+         };
+
+         const object2 = object1;
+         object1.message = 'Hi how are you?';
+
+         const object3 = {
+          message: 'Hi how are you?',
+         }
+
+         console.log(object1);
+         console.log(object2);
+         console.log(object3 === object1);
+         console.log(object2 === object1);
+
+
+         const object4 = {
+          message: 'Hi how are you?',
+          other: 'Pretty good, actually',
+         }
+        //const message = object4.message;
+        const{ message, other} = object4;
+        console.log(message,other);
+
+        const object5 = {
+          //message: message || shorthand property: if the property and the variable its the same, we can type it out once
+          message,
+          //method: function function1(){
+            //console.log('method')
+          //}
+          method (){
+            console.log('method');
+          }    
+        };
+
+        
+        console.log(object5);
+        object5.method();
+
+
+
+
+
           </script>
 </body>
 </html>
