@@ -55,6 +55,8 @@
           const jsonString = JSON.stringify(producto);
           console.log(JSON.parse(jsonString));    //WITH THIS CAN CONVERT BACK AND FORTH Javascript Object => JSON
           */
+
+        /*
          const object1 = {
           message: 'hello',
          };
@@ -93,7 +95,33 @@
 
         
         console.log(object5);
-        object5.method();
+        object5.method();*/ 
+  
+        
+        //product['delivery-time'] = '3 days bro';
+
+        function compare_price (product,product2){
+        if (product.price < product2.price){
+          return product;
+        } else{
+          return product2;
+        }
+        }
+
+        const product = {
+          name: 'Basketball',
+          price: 2095
+        }
+        const product2 = {
+          name: 'Other Basketball',
+          price: 2000
+        }
+
+        console.log(compare_price(product,product2))
+
+  
+
+
 
 
 
