@@ -100,7 +100,7 @@
         
         //product['delivery-time'] = '3 days bro';
 
-        function compare_price (product,product2){
+       /* function compare_price (product,product2){
         if (product.price < product2.price){
           return product;
         } else{
@@ -117,8 +117,23 @@
           price: 2000
         }
 
-        console.log(compare_price(product,product2))
+        console.log(compare_price(product,product2))*/
 
+        function isSameProduct(product1,product2){
+          if (product1 === product2){
+            return product1;
+          } else{
+            return product2;
+          }
+        }
+        const product1 = {
+          name: 'Ball',
+          price: 10
+        }
+        const product2 = {
+          name: 'Ball1',
+          price: 20
+        }
   
 
 

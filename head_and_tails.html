@@ -7,22 +7,23 @@
 </head>
 <body>
 
-    <button onclick="playGame(resultado)">
+    <button onclick="playGame('Heads')">
         Heads
     </button>
 
-    <button onclick="playGame(resultado)">
+    <button onclick="playGame('Tails')">
         tails
     </button>
+
+    
 
 
 
     <script>
-        function playGame(result){
+        function playGame(guess){
         
         const randomNumber = Math.random();
-        const result = randomNumber < 0.5 ? 'heads' : 'tails';
-        const guess = 'heads';
+        const result = randomNumber < 0.5 ? 'Heads' : 'Tails';
         console.log(guess === result ? 'You win' : 'You lose');
         }
         
