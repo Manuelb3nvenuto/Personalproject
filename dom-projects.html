@@ -13,11 +13,18 @@
     Subscribe();
    " class="js-subscribe">Subscribe</button>
    <p>Amazon Shipping Calculator</p>
-   <input placeholder="Cost of the Order" class="js-cost" onkeydown=" console.log('typing')"> //clicks, keydowns = events || event listeners = onclick, onkeydown
+   <input placeholder="Cost of the Order" class="js-cost" onkeydown="downKey(event);"> 
+   //clicks, keydowns = events || event listeners = onclick, onkeydown they check for new events/changes
    <button onclick=" calculateTotal(); ">Calculator</button>
    <p class="js-total"></p>
 
     <script>
+        function downKey(event){
+            if (event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+
         function calculateTotal(){
              const inputElement = document.querySelector('.js-cost');
              let cost  = Number(inputElement.value); // we gotta change it manually to a other syntaxis 
