@@ -8,8 +8,17 @@
 <body>
 
     <button> hello </button>
-    <script>
+    <button class="js-button">Second button</Button></button>
 
+    <script>
+    console.log(document.querySelector('button').innerHTML); document.querySelector('button').innerHTML = 'Change';
+    console.log (document.querySelector('.js-button'))
+
+
+
+
+
+        /*
         console.log(document.title);
         document.title = 'Change';
 
@@ -17,13 +26,16 @@
         console.log(typeof document.body);
         console.log(document.body.innerHTML)
         document.body.innerHTML = '<button>GOOD JOB!</button>';
+        */ 
 
+        
 
         /*
         document.body.innerHTML = 'hello';
         document.title = "DOM en html";
         */ 
 
+        //method is a function saved inside an object
 
 
         //syntax rules || build in document object| contains body and objects that we can access using dot notation|| its linked to the webpage|| it has methods||
