@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-9">9a</button>
+
+    <button class="js-b9">9b</button>
+
+    <button onclick="document.querySelector('.js-heads').innerHTML = `You choose Heads`;">Heads</button>
+    <button onclick="document.querySelector('.js-tails').innerHTML = `You choose Tails`;">Tails</button>
+
+    <p class="js-heads"></p>
+</br> <p class="js-tails"></p>
+
+    <input placeholder="Name"  class="js-Submit" onkeydown="
+    if (event.key === 'Enter'){
+        Submit();
+    }
+    ">
+    <button onclick = " 
+    Submit();
+    ">Submit</button>
+
+    
+    <p class="js-message"></p>
+    
+    
+    
+    
+    <script>
+        /*
+       console.log(document.querySelector('.js-9'))
+
+       document.querySelector('.js-b9').innerHTML = '9b done!';
+
+       function Submit(){
+        
+       }*/ 
+
+       function Submit(){
+        const inputElement = document.querySelector('.js-Submit');
+        document.querySelector('.js-message').innerHTML = `Your name is: ${inputElement.value}`;
+    
+       }
+
+
+
+
+
+    </script>
+</body>
+</html>
