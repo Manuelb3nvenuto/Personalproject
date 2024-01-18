@@ -19,14 +19,17 @@
     <input placeholder="Name"  class="js-Submit" onkeydown="
     if (event.key === 'Enter'){
         Submit();
+        saySo();
     }
     ">
     <button onclick = " 
     Submit();
+    saySo('js-message');
     ">Submit</button>
 
     
     <p class="js-message"></p>
+    <p class=""></p>
     
     
     
@@ -46,8 +49,10 @@
         document.querySelector('.js-message').innerHTML = `Your name is: ${inputElement.value}`;
     
        }
-
-
+       function saySo(onkeydown){
+        const inputElement = document.querySelector('.js-Submit');
+        document.querySelector('.js-message').innerHTML = `You are putting the follwing text: ${inputElement.value}`
+       }
 
 
 
