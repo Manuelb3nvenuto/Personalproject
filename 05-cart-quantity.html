@@ -1,64 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button onclick="
+      // Display the cart quantity on the page
+      // instead of in the console.
+      displayCartQuantity();
+    ">Show Quantity</button>
 
-<head>
+    <button onclick="
+      updateCartQuantity(1);
+    ">Add to Cart</button>
 
-    <head>
-        Cart Quantity</head>
-    <style>
-        .red-button {
-            background-color: red;
-            color:aliceblue;
-            border-color: none;
-        }
-    
-        .yellow-button {
-            background-color: yellow;
-            color: black;
-            border-color: none;
-        }
-        
-        .orange-button {
-            background-color: orange;
-            color: black;
-            border-color: none;
-        }
-    </style>
-    
-</head>
-<body>
-   <br> </br> <button title="Show quantity" class="yellow-button" onclick="console.log(`Cart quantity : ${cartQuantity}`)""; > Show quantity </button>
+    <button onclick="
+      updateCartQuantity(2);
+    ">+2</button>
 
-    <button onclick="cartQuantity ++; console.log(`Cart quantity : ${cartQuantity}`);" title="Add to cart" class="orange-button"> Add Cart </button>
+    <button onclick="
+      updateCartQuantity(3);
+    ">+3</button>
 
-    <button onclick="cartQuantity += 2; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+2</button>
+    <button onclick="
+      updateCartQuantity(4);
+    ">+4</button>
 
-    <button onclick="cartQuantity += 3; console.log(`Cart quantity : ${cartQuantity}`);" class="tres">+3</button>
+    <button onclick="
+      updateCartQuantity(5);
+    ">+5</button>
 
-    <button onclick="cartQuantity += 4; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+4</button>
+    <button onclick="
+      updateCartQuantity(-1);
+    ">Remove from cart</button>
 
-    <button onclick="cartQuantity += 5; console.log(`Cart quantity : ${cartQuantity}`);" class="dos">+5</button>
+    <button onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
 
-    <button onclick = "cartQuantity --; console.log('Removed form cart.'); console.log(`Cart quantity : ${cartQuantity}`);">Remove 1 item from de Cart</button>
+    <button onclick="
+      updateCartQuantity(-3);
+    ">-3</button>
 
-    <button onclick = "cartQuantity -= 2; console.log('Removed form cart.'); console.log(`Cart quantity : ${cartQuantity}`);">Remove 2 item from de Cart</button>
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
 
-    <button onclick = "cartQuantity -= 3; console.log('Removed form cart.'); console.log(`Cart quantity : ${cartQuantity}`);">Remove 3 item from de Cart</button>
+      // Display the cart quantity after updating.
+      displayCartQuantity();
+    ">Reset Cart</button>
 
-
-    <button onclick = "cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity : ${cartQuantity}`);" type="reset">Reset cart</button>
-
-    
-
-
-
-
+    <!-- Create an element to display the cart quantity. -->
+    <p class="js-cart-quantity"></p>
 
     <script>
+      let cartQuantity = 0;
 
-        let cartQuantity = 0;
+      // Display the cart quantity when the page loads.
+      displayCartQuantity();
 
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full');
+          return;
+        }
 
-</script> 
-</body>
+        if (cartQuantity + change < 0) {
+          alert('Not enough items in the cart');
+          return;
+        }
+
+        cartQuantity += change;
+
+        // Display the cart quantity after updating.
+        displayCartQuantity();
+      }
+
+      function displayCartQuantity() {
+        document.querySelector('.js-cart-quantity')
+          .innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+    </script>
+  </body>
 </html>
