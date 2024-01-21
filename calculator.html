@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head> <title> Calculator </title> </head>
   <body>
     <!-- Code changes are at the bottom. -->
     <p>
@@ -67,10 +67,7 @@
       ">.</button>
 
       <button onclick="
-        // Note: eval() takes a string and runs it as code.
-        // Avoid using eval() in real world projects since
-        // it can potentially be given harmful code to run.
-        // Only use eval() for learning purposes.
+        
         calculation = eval(calculation);
         console.log(calculation);
 
@@ -88,10 +85,11 @@
         calculation = '';
         console.log(calculation);
 
-        // Remember to save the calculation here.
         localStorage.setItem('calculation', calculation);
       ">Clear</button>
     </p>
+
+
 
     <script>
       let calculation = localStorage.getItem('calculation') || '';
@@ -102,11 +100,11 @@
         localStorage.setItem('calculation', calculation);
       }
 
-      // Optional: you can also create a function in order
-      // to reuse this code.
+
       function saveCalculation() {
         localStorage.setItem('calculation', calculation);
       }
+
     </script>
   </body>
 </html>
