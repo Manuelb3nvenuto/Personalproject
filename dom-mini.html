@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini dom</title>
+</head>
+<body>
+    <input onkeyup="typeType(event)" class="js-typing">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+         function typeType(event) {
+        if (event.key === 'Enter') {
+          whatWrote();
+        }
+      }
+
+      function whatWrote() {
+        const inputElement = document.querySelector('.js-typing').innerHTML = ".js-typing";
+    }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
