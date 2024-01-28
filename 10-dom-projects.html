@@ -34,13 +34,23 @@
         }
         .cost-input{
             font-size: 15px;
+            /*
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
             padding-right: 10px;
+            */
+            padding: 10px;
         }
-    
 
+        .calculate-button{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 10px 50px;
+            cursor: pointer;
+        }
 
 
     </style>
@@ -52,8 +62,7 @@
    " class="js-subscribe-button subscribe-button">Subscribe</button>
    <p>Amazon Shipping Calculator</p>
    <input placeholder="Cost of the Order" class="js-cost cost-input" onkeydown="downKey(event);"> 
-   //clicks, keydowns = events || event listeners = onclick, onkeydown they check for new events/changes
-   <button onclick=" calculateTotal(); ">Calculator</button>
+   <button onclick=" calculateTotal();" class="calculate-button">Calculator</button>
    <p class="js-total"></p>
 
     <script>
@@ -100,3 +109,4 @@
     </script>
 </body>
 </html>
+//clicks, keydowns = events || event listeners = onclick, onkeydown they check for new events/changes 
