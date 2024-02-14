@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basicos</title>
+</head>
+<body>
+    <script>
+        try {
+            console.log("En el try se agrega el codigo a evaluar");
+            jeuhu(); 
+
+            console.log("segundo mensaje en el try");
+            
+        } catch (error) {
+            console.log("Catch captura cualquier error surgido o lanzado en el try ");
+            console.log(error);
+
+        } finally {
+            console.log("El bloque finally se ejecutara siempre al final de un bloque de try-catch");
+
+        }
+
+        try {
+            let numero = "hola";
+            if(isNaN(numero)){
+                throw new Error("Numero no esta definido como un numero");
+
+            } 
+            console.log(numero * numero)
+        } catch (error) {
+            console.log(`Se produjo el siguiente error: ${error}`)
+        }
+         
+        //esto es una estructura de control de errores|| Error se considera como una opcion general a los diferentes tipos de errores
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
