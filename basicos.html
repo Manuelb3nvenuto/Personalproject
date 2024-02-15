@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        /*
+        // check errors on the code
         try {
             console.log("En el try se agrega el codigo a evaluar");
             jeuhu(); 
@@ -34,7 +36,46 @@
         }
          
         //esto es una estructura de control de errores|| Error se considera como una opcion general a los diferentes tipos de errores
-        
+        */ 
+       //break y continue
+       /* 
+       const numeros = [1,2,3,4,5,6,7,8,9.0];
+
+       for (let i=0; i< numeros.length; i++){
+        if(i === 5)
+        break; 
+        console.log(numeros[i]);
+       }
+
+       for (let i=0; i< numeros.length; i++){
+        if(i === 5)
+        continue; 
+        console.log(numeros[i]);
+       }*/
+
+       //sin destructuracion
+
+       let numeros  = [1,2,3];
+
+       let uno = numeros [0],
+        dos = numeros[1],
+        tres = numeros[2];
+        console.log(uno,dos,tres);
+
+        //con destructuracion
+        const [one,two,three] = numeros;
+        console.log(one,two,three);
+    
+        let persona = {
+            nombre: "Manuel",
+            apellido: "Rivera",
+            edad: 35
+        };
+        //lo entiendo como el poder obtener la destructuracion llamando selectivamente la variable creada a partir de las propiedades dadas, respetando ordenes definidos de lo anterior
+        let{nombre ,apellido, edad} = persona
+        console.log(nombre,apellido,edad)
+       
+
 
 
 
