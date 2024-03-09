@@ -11,12 +11,12 @@
     <p>Youtube Suscribe Button </Button></p>
     <button onclick="
     Subscribe();
-   " class="js-subscribe">Subscribe</button>
-   <p>Amazon Shipping Calculator</p>
-   <input placeholder="Cost of the Order" class="js-cost" onkeydown="downKey(event);"> 
+    " class="js-subscribe">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of the Order" class="js-cost" onkeydown="downKey(event);"> 
    //clicks, keydowns = events || event listeners = onclick, onkeydown they check for new events/changes
-   <button onclick=" calculateTotal(); ">Calculator</button>
-   <p class="js-total"></p>
+    <button onclick=" calculateTotal(); ">Calculator</button>
+    <p class="js-total"></p>
 
     <script>
         function downKey(event){
@@ -26,10 +26,10 @@
         }
 
         function calculateTotal(){
-             const inputElement = document.querySelector('.js-cost');
+            const inputElement = document.querySelector('.js-cost');
              let cost  = Number(inputElement.value); // we gotta change it manually to a other syntaxis 
         
- 
+
         if (cost < 40){
             cost = cost + 10;
         }
