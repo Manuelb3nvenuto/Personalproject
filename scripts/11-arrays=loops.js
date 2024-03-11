@@ -1,3 +1,4 @@
+/*
 const nums = [
     10,
     20,
@@ -12,3 +13,4 @@ const nums = [
     function getLastValue(){
         
     }
+    */
