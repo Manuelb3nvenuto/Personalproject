@@ -7,63 +7,126 @@
 </head>
 <body>
     <script>
-        //Whatever it's on the funciton its close, whatever its on the global it's everywhere
-        /* const name = 'Manuel';
+    //Whatever it's on the funciton its close, whatever its on the global it's everywhere
+    /* const name = 'Manuel';
 
-        function adder(num1,num2){
-            console.log(num1 + num2);
+    function adder(num1,num2){
+    console.log(num1 + num2);
+    }
+
+    adder(10,1);*/
+
+    /*
+
+    const name = 'Manuel';
+
+    const media = 'youtube';
+
+    function toUpper(text){
+    const upperCased = text.toUpperCase();
+    console.log(upperCased);
+    }
+
+    toUpper(name);
+    toUpper(media);
+    //tomorrow finishing with next step of project, but before , practice more with those functions and if statements*/
+
+    /*
+    const numeros = [1,2,3];
+    //sin destructuracion
+    let uno = [0],
+    dos = [1],
+    tres = [2];
+
+
+    //con destructuracion
+
+    const [one,two,three] = numeros;
+
+    console.log(one,two,three);
+
+    const persona = {
+    nombre:"Jose",
+    apellido: "Rivera",
+    edad: 20
+    };
+
+    let {nombre,edad ,apellido} = persona;
+
+    console.log(nombre,apellido,edad);
+    */
+
+    //parametros REST y Operador spread
+/*
+    function sumar(a,b,...c){
+        let resultado = a + b;
+
+    c.forEach(function(n){
+    resultado += n
+
+    });
+    return resultado;
+}
+console.log(sumar(1,2));   
+console.log(sumar(1,2,3));    
+console.log(sumar(1,2,3,4));    
+console.log(sumar(1,2,3,4,5));    
+console.log(sumar(1,2,3,4,5,6))    
+
+const arr1 = [1,2,3,4,5],
+    arr2 = [6,7,8,9];
+console.log(arr1,arr2);
+
+const arr3 = [...arr1,...arr2];
+
+console.log(arr3)
+
+
+let list = [1,2,3,3,4,5,5,5,5,5];
+    let unicos = new Set(list);
+
+    console.log("Unicos: ", [...unicos]);
+    */
+
+    //ARROW FUNCTIONS
+    /*const saludar = () => console.log('HOLA')
+    saludar()*/
+    
+    /*const saludar = (nombre) => console.log(`HOLA ${nombre}`)
+    saludar("Manuel");
+
+    const sumar = function(a,b){
+        return (a + b);
+
+    }*/
+
+    const sumar = (a,b) => a + b;
+    console.log(sumar(9,9));
+
+    const funcionDeVariasLineas = () => {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+    };
+
+    funcionDeVariasLineas();
+
+    const numeros = [1,2,3,4,5];
+
+    numeros.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+
+    /*function Perro (){
+        console.log(this);
+    }
+    Perro();*/
+
+    const perro = {
+        nombre: "Doggie",
+        ladrar: ()=> {
+            console.log(this);
         }
-
-        adder(10,1);*/
-
-        /*
-
-        const name = 'Manuel';
-
-        const media = 'youtube';
-
-        function toUpper(text){
-            const upperCased = text.toUpperCase();
-            console.log(upperCased);
-        }
-
-        toUpper(name);
-        toUpper(media);
-        //tomorrow finishing with next step of project, but before , practice more with those functions and if statements*/
-
-        /*
-        const numeros = [1,2,3];
-        //sin destructuracion
-        let uno = [0],
-        dos = [1],
-        tres = [2];
-
-
-        //con destructuracion
-
-        const [one,two,three] = numeros;
-
-        console.log(one,two,three);
-
-        const persona = {
-            nombre:"Jose",
-            apellido: "Rivera",
-            edad: 20
-        };
-
-        let {nombre,edad ,apellido} = persona;
-
-        console.log(nombre,apellido,edad);
-        */
-
-        let list = [1,2,3,3,4,5,5,5,5,5];
-
-        let unicos = new Set(list);
-
-        console.log("Unicos: ", [...unicos]);
-
-
-
+    }
+    perro.ladrar();
 
 
     </script>
