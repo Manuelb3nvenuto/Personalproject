@@ -13,24 +13,18 @@ function renderTodoList (){
 
    let toDoHTML = '';
 
-   for (let i = 0; i < toDo.length; i++){
-      const makeItObject = toDo[i];
-      //const name = makeItObject.name;
-      //const dueDate = makeItObject.dueDate;
-
+   toDo.forEach((makeItObject, index) => {
       const {name , dueDate} = makeItObject;
-      
       const html = 
       `<div>${name}</div>
       <div>${dueDate}</div>
       <button onclick = "
-      toDo.splice(${i}, 1);
+      toDo.splice(${index}, 1);
       renderTodoList();
       " class="delete-todo-button" >Delete</button>
       `;
       toDoHTML += html;
-   }
-
+   });
    document.querySelector('.js-toDo-list').innerHTML = toDoHTML;
 }
 function addTodo(){
