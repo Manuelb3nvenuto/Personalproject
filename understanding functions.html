@@ -86,49 +86,52 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     let unicos = new Set(list);
 
     console.log("Unicos: ", [...unicos]);
-    */
-
-    //ARROW FUNCTIONS
-    /*const saludar = () => console.log('HOLA')
-    saludar()*/
+[
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+].forEach(function(value, index){
+    if (value === 'wash dishes'){
+        return;
+    }
     
-    /*const saludar = (nombre) => console.log(`HOLA ${nombre}`)
-    saludar("Manuel");
+console.log(index);
+console.log(value);
+});
 
-    const sumar = function(a,b){
-        return (a + b);
+//arrow functions
 
-    }*/
+const regularFuntion = function(param,param2){
+    console.log("Normal Hello")
+    return 5;
+}
 
-    const sumar = (a,b) => a + b;
-    console.log(sumar(9,9));
+const arrow = (param, param2) => {
+    console.log("Hello World")
+    return 5;
+};
+arrow();
+regularFuntion();
 
-    const funcionDeVariasLineas = () => {
-        console.log("Uno");
-        console.log("Dos");
-        console.log("Tres");
-    };
+const oneParam = param => {
+    console.log(param + 1)
+}
 
-    funcionDeVariasLineas();
+oneParam(2)
 
-    const numeros = [1,2,3,4,5];
-
-    numeros.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
-
-    /*function Perro (){
-        console.log(this);
+const oneLine = () => 2 + 3;
+console.log(oneLine());
+//Shorthand method sintax
+const object2 = {
+    method(){
+        
     }
-    Perro();*/
-
-    const perro = {
-        nombre: "Doggie",
-        ladrar: ()=> {
-            console.log(this);
-        }
-    }
-    perro.ladrar();
+};
+*/
 
 
-    </script>
+
+
+</script>
 </body>
 </html>
