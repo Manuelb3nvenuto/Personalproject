@@ -166,7 +166,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     const sumar = function(a,b){
         return (a + b);
 
-    }*/
+    }
 
     const sumar = (a,b) => a + b;
     console.log(sumar(9,9));
@@ -186,7 +186,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     /*function Perro (){
         console.log(this);
     }
-    Perro();*/
+    Perro();
 
     const perro = {
         nombre: "Doggie",
@@ -195,6 +195,36 @@ let list = [1,2,3,3,4,5,5,5,5,5];
         }
     }
     perro.ladrar();
+    */   
+    //POO
+    /*
+    Class-Following Model
+    Objects-Instance of a class
+    */
+
+
+    //Funcion constructura
+    function Animal (nombre,genero) {
+     //Atributos
+    this.nombre = nombre;
+    this.genero = genero;
+    
+}
+//Metodos agregados al prototipo de la funcion constructora
+Animal.prototype.sonar = function(){
+        console.log(`Hago ruido por que estoy vivo`);
+    }
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre} y soy ${this.genero}`);
+}
+const snoppy  = new Animal("Snoopy","Macho"),
+tigreSa = new Animal("Tigresa","Hembra");
+
+console.log(snoppy);
+console.log(tigreSa);
+
+snoppy.saludar();
+tigreSa.saludar();
 
 
 
