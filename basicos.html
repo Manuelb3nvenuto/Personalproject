@@ -203,7 +203,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     */
 
 
-    //Funcion constructura
+    //Funcion constructura 
     function Animal (nombre,genero) {
      //Atributos
     this.nombre = nombre;
@@ -217,13 +217,42 @@ Animal.prototype.sonar = function(){
 Animal.prototype.saludar = function(){
     console.log(`Hola me llamo ${this.nombre} y soy ${this.genero}`);
 }
-const snoppy  = new Animal("Snoopy","Macho"),
+
+//HERENCIA PROTOTIPICA
+function Perro(nombre,genero,tamanho)  {
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanho = tamanho;
+}
+//PERRO ESTA HEREDANDO DE ANIMAL
+Perro.prototype = new Animal();
+Perro.prototype.constructor = Perro;
+
+//Sobreescritura de metodos del prototipo padre en el hijo
+
+Perro.prototype.sonar = function(){
+    console.log("SOY UN PERRO Y MI SONIDO ES");
+};
+
+Perro.prototype.saludar = function(){
+    console.log("GUAAAAF GUAAAAF");
+}
+
+
+const snoppy  = new Perro("Snoopy","Macho", "Mediano"),
+Snoopy2= new Perro("Mastiff", "Macho","Mediano"),
 tigreSa = new Animal("Tigresa","Hembra");
 
 console.log(snoppy);
 console.log(tigreSa);
 
+Snoopy2.sonar();
+Snoopy2.saludar();
+
+snoppy.sonar();
 snoppy.saludar();
+
+tigreSa.sonar();
 tigreSa.saludar();
 
 
