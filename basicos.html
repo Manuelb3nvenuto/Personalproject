@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basicos</title>
+    <title>Javascrip</title>
 </head>
 <body>
     <script>
@@ -202,7 +202,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     Objects-Instance of a class
     */
 
-
+/*
 //Funcion constructura 
 function Animal (nombre,genero) {
     //Atributos
@@ -265,7 +265,8 @@ scooby.sonar();
 scooby.ladrar();
 console.log(scooby.getRaza);
 scooby.setRaza = "Grán Danés";
-console.log(scooby.getRaza); 
+console.log(scooby.getRaza);*/
+
 
 
 /* function Perro(nombre,genero,tamanho)  {
@@ -307,6 +308,69 @@ snoppy.saludar();
 tigreSa.sonar();
 tigreSa.saludar();*/ 
 
+//objeto console
+console.log(console);
+
+console.warn("Esto es un aviso");
+console.error("Esto es un error");
+
+let nombre = "manuel",
+    apellido = 'rivera',
+    edad = 20;
+    console.log(nombre);
+    console.log(apellido);
+    console.log(edad);
+
+    console.log(`hola mi nombre es ${nombre} y mi apellido es ${apellido} y tengo ${edad}`);
+    console.log(`hola mi nombre es %s y mi apellido es %s y tengo %d`, nombre,apellido,edad);
+
+    console.clear();
+
+    console.dir(document);
+
+    console.clear();
+
+    console.group("Oracle");
+    console.log("Microsoft");
+    console.log("Linkedin");
+    console.groupEnd();
+    console.clear();
+
+    console.log(console);
+    console.table(Object.entries(console).sort());
+
+    const animales = [
+        "perro",
+        "gato",
+        "pajaro"
+    ];
+    console.table(animales);
+    console.clear();
+    
+
+    console.time("cuanto tiempo tarda mi codigo");
+
+    const arreglo = Array(100000);
+
+    for (let i = 0; i < arreglo.length; i++){
+        arreglo[i] = i;
+    };
+
+    console.timeEnd("cuanto tiempo tarda mi codigo");
+    //console.log(arreglo);
+    console.clear();
+
+    for (let i = 0; i < 10
+    ; i++){
+        console.count("codigo for");
+        console.log(i);
+    }
+    console.clear();
+    let x = 1,
+    y = 2,
+    pruebaXY = "Se espera que X sea mayor que Y";
+
+    console.assert(x>y,{x,y,pruebaXY});
 
 
 
