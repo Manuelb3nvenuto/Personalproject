@@ -107,7 +107,7 @@
     tres = [2];
 
 
-    //con destructuracion
+    *********DESTRUCTURACION*********
 
     const [one,two,three] = numeros;
 
@@ -156,7 +156,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     console.log("Unicos: ", [...unicos]);
     */
 
-    //ARROW FUNCTIONS
+   //***********************ARROW FUNCTIONS***************************
     /*const saludar = () => console.log('HOLA')
     saludar()*/
     
@@ -203,7 +203,7 @@ let list = [1,2,3,3,4,5,5,5,5,5];
     */
 
 /*
-//Funcion constructura 
+//******FUNCION CONSTRUCTORA********** 
 function Animal (nombre,genero) {
     //Atributos
 this.nombre = nombre;
@@ -218,7 +218,7 @@ Animal.prototype.saludar = function(){
 console.log(`Hola me llamo ${this.nombre} y soy ${this.genero}`);
 }
 
-//HERENCIA PROTOTIPICA
+//******************HERENCIA PROTOTIPICA******************
 
 class Perro extends Animal {
     constructor(nombre, genero, tamanio) {
@@ -309,7 +309,7 @@ tigreSa.sonar();
 tigreSa.saludar();*/ 
 
 /*
-//objeto console
+//********************objeto console****************************
 console.log(console);
 
 console.warn("Esto es un aviso");
@@ -374,6 +374,8 @@ let nombre = "manuel",
     console.assert(x>y,{x,y,pruebaXY});
     */
 
+    //*************OBJETO DATE********************
+
     // console.log(Date())
 
     // let fecha = new Date();
@@ -400,38 +402,77 @@ let nombre = "manuel",
     // let manuel = new Date(2003,11,11);
     // console.log(manuel)
 
-    console.log(Math);
-    console.log(Math.PI);
-    console.log(Math.abs(7.8));
-    console.log(Math.ceil(7.2));
-    console.log(Math.floor(7.2));
-    console.log(Math.round(7.5));
-    console.log(Math.round(7.49));
-    console.log(Math.sqrt(81));
-    console.log(Math.pow(2,5));
-    console.log(Math.sign(0.3)); //-1 0 1 es si es negativo|positivo|negativo
-    console.log(Math.random());
-    console.log(Math.random() * 10000);
+    // console.log(Math);
+    // console.log(Math.PI);
+    // console.log(Math.abs(7.8));
+    // console.log(Math.ceil(7.2));
+    // console.log(Math.floor(7.2));
+    // console.log(Math.round(7.5));
+    // console.log(Math.round(7.49));
+    // console.log(Math.sqrt(81));
+    // console.log(Math.pow(2,5));
+    // console.log(Math.sign(0.3)); //-1 0 1 es si es negativo|positivo|negativo
+    // console.log(Math.random());
+    // console.log(Math.random() * 10000);
+
+    //*******OPERADOR CORTOCIRCUITO********
+    /*Cortocircuito OR - Cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor que se cargara por defecto */
+
+    /*Cortocircuito ANd -Cuando el valor de la izquierda en la expresion siempre pueda validar a false, es el valor que se carfara por defectp */
+
+    // function saludar (nombre){
+    //     nombre = nombre || "Desconocido";
+    //     console.log(`Hola como estas ${nombre}`);
+    // }
+    // console.log();
+
+    // saludar("Manuel");
+
+    // saludar();
+
+    // // console.log(true || "Valor de la derecha ")
+    // // console.log(true || "Valor de la derecha ")
+
+    // // console.log(198 || "Valor de la derecha ")
+    // // console.log("cadena" || "VAlor de la derecha ")
+    // // console.log('' || "Valor de la derecha ")
+    // // console.log(-2 || "Valor de la derecha ")
+    // // console.log(0 || "Valor de la derecha ")
+    
+    // console.log(false &&  "VALOR DE LA DERECHA")
+    // console.log(null &&  "VALOR DE LA DERECHA")
+    // console.log(undefined &&  "VALOR DE LA DERECHA")
+    // console.log("" &&  "VALOR DE LA DERECHA")
+    // console.log( -2 &&  "VALOR DE LA DERECHA")
+    // console.log(0 &&  "VALOR DE LA DERECHA")
 
 
+    /*
+    const objeto = {
+        nombre: "Manuel",
+        apellido: "Rivera",
+        edad: 23,
+        pasatimepos: ["jugarr","correr","saltar","enamorarse"],
+        contacto: {
+            email:"emasdasmdamd",
+            tel: 234324234234234,
+            instagram: "ndasondansdnosanodnao",
+        },
+        saludar: function() {
+            console.log('como andas amigo')
+        },
+        decirMiNombre: function () {
+            console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} `)
+        }
+    }
+
+    console.log(objeto['nombre'],objeto['apellido']);
+    console.log(objeto.contacto.tel);
+
+    objeto.saludar();
+    */
 
     
-
-
-    console.log(Math);
-
-
-    
-
-
-
-
-
-
-
-
-
-
 
 
 
