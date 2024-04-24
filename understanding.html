@@ -127,11 +127,383 @@
         console.log(manuel.hasOwnProperty("nombre"))
         console.log(manuel.hasOwnProperty("nacimiento"))*/
         
+        //******OPERADORES**********
+        /* Aritméticos:  + - * / % ()  */
+
+        /* let a = 5 + (5 - 10) * 3;
+        let modulo = 5 % 2;
+
+        console.log(a);
+        console.log(modulo);
+        */
+
+        /*  Relacionales: >, <,   >=, <=, ==, ===, !=, !== */
+
+        /* console.log(8 > 9);
+        console.log(9 > 8);
+        console.log(8 >= 9);
+        console.log(9 >= 8);
+        console.log(7 < 7);
+        console.log(7 <= 7); */
+
+        /*
+        = 1 igual es asignación  de variable
+        == 2 iguales es comparacion de valores
+        === 3 igulaes es comparación de tipo de dato y de valor
+        */
+
+        /* console.log(7 == 7);
+        console.log("7" == 7);
+        console.log(0 == false);
+
+        console.log(7 === 7);
+        console.log("7" === 7);
+        console.log(0 === false); */
+        //falsy
+        /* Incremento Decremento */
+        /* let i = 2;
+
+        console.log(i++);
+        console.log(++i); */
+
+        //i = i + 2;
+        //i *= 3;
+
+        //operador unario
+        /* i++;
+        i--;
+        ++i;
+        --i;
+        console.log(i); */
+
+        /*
+        Lógicos
+        ! - Not : Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+        || - Or: Cuando tengo 2 o más condiciones, con que una se cumpla, es decir sea verdadera, el OR será verdadero.
+        && - And: Cuando tengo 2 o más condiciones, todas tienen que cumplirse, es decir ser verdaderas, para que AND se valide */
+        /*
+        console.log(!true);
+        console.log(!false);
+        console.log((9 === 9) || ("9" === 9));
+        console.log((9 === 9) && ("9" === 9));
+        console.log((9 === 9) && ("9" === "9"));  */   
+        
+        //**********CONDICIONALES*************
+        /* edad = 17
+
+        if (edad >= 18){
+            console.log("eres mayor de edad")
+        }else{
+            console.log("no eres mayor de edad")
+        } */
+
+
+            /* if - else if - else */
+    /*
+    Déjame Dormir - 0hrs - 5hrs
+    Buenos dias 6hrs - 11hrs
+    Buenas tardes 12hrs - 18hrs
+    Buenas noches 19hrs - 23hrs
+*/
+/* let hora = 23;
+if (hora >= 0 && hora <= 5) {
+    console.log("Déjame dormir");
+} else if (hora >= 6 && hora <= 11) {
+    console.log("Buenos días");
+} else if (hora >= 12 && hora <= 18) {
+    console.log("Buenas tardes");
+} else {
+    console.log("Buenas noches");
+}
+
+if (hora < 6) {
+    console.log("Déjame dormir");
+} else if (hora > 5 && hora < 12) {
+    console.log("Buenos días");
+} else if (hora > 11 && hora < 19) {
+    console.log("Buenas tardes");
+} else {
+    console.log("Buenas noches");
+} */
+
+/* Operador Ternario (condición) ? verdadero : falsa */
+/*  console.log("Operador Ternario");
+    let eresMayor = (edad >= 18)
+    ? "Eres mayor de Edad"
+    : "Eres menor de Edad";
+    console.log(eresMayor); */
+
+/* switch - case */
+/*
+domingo -0
+lunes - 1
+martes - 2
+miércoles - 3
+jueves - 4
+viernes - 5
+sábado - 6
+*/
+/*
+let dia = 0;
+
+switch (dia) {
+    case 0:
+    console.log("Domingo");
+    break;
+    case 1:
+    console.log("Lunes");
+    break;
+    case 2:
+    console.log("Martes");
+    break;
+    case 3:
+    console.log("Miércoles");
+    break;
+    case 4:
+    console.log("Jueves");
+    break;
+    case 5:
+    console.log("Viernes");
+    break;
+    case 6:
+    console.log("Sábado");
+    break;
+    default:
+    console.log("El día no existe");
+    break;
+}
+*/
+
+    //**********CICLOS*****************
+    /*
+let contador = 0;
+
+    while (contador < 10) {
+    console.log("while " + contador);
+    contador++;
+    }
+
+
+    do {
+    console.log("do while " + contador);
+    contador++;
+    } while (contador < 10); 
+
+//for (inicialización de variable; condición; decremento o incremento) {
+//    sentencias que ejecuta el for
+//    sentencias que ejecuta el for
+//    sentencias que ejecuta el for
+//}
+
+for (let i = 0; i < 10; i++) {
+    console.log("for " + i);
+}
+
+let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i]);
+}
+
+const jon = {
+    nombre: "Jon",
+    apellido: "MirCha",
+    edad: 35
+}
+
+for (const propiedad in jon) {
+    console.log(`Key: ${propiedad}, Value: ${jon[propiedad]}`);
+}
+
+for (const elemento of numeros) {
+    console.log(elemento);
+}
+
+let cadena = "Hola Mundo";
+
+for (const caracter of cadena) {
+    console.log(caracter);
+}*/
+
+//**********DESTRUCTURING************
+/*nueva forma de asignar valores para arreglos y objetos*/
+//SIN DESTRUCTURING
+
+/* let numeros = [1,2,3]
+
+let uno = numeros[0],
+dos = numeros[1],
+tres = numeros[2];
+
+console.log(uno,dos,tres)
+
+//CON DESTRUCTURING
+
+const [one,two,three] = numeros;
+console.log(one,two,three);
+
+let persona = {
+    nombre: "Manuel",
+    apellido:"Rivera",
+    edad: 23
+}
+
+let {nombre,apellido,edad} = persona;
+console.log(nombre,apellido,edad); */
+
+//*********LITERAL OBJECTS**************
+
+/*
+let nombre = "Manuel",
+edad = 21;
+
+const saludo = {
+    nombre:nombre,
+    edad: edad,
+    saludar(){
+        console.log("Como estas amigo?")
+    }
+}
+console.log(saludo)
+saludo.saludar();
+
+
+const greeting = {
+    nombre,
+    edad,
+    raza:"hispanic",
+    greet(){
+        console.log("Como estas amigo de mi amigo?")
+    }
+}
+
+console.log(greeting)
+greeting.greet(); */
+
+//***********PARAMETROS REST**************
+/*
+function sumar (a,b,...c){
+    let resultado = a + b;
+    c.forEach(function(n){
+        resultado += n;
+    })
+    return resultado;
+}
+console.log(sumar(1,2))
+console.log(sumar(1,2,3))
+console.log(sumar(1,2,3,4))
+console.log(sumar(1,2,3,4,5))
+console.log(sumar(1,2,3,4,5,6))
+console.log(sumar(1,2,3,4,5,6,7))
+
+const arr1 = [1,2,3,4,5],
+arr2 = [6,7,8,9,10]
+
+console.log(arr1,arr2);
+
+
+const arr3 = [...arr1,...arr2]
+console.log(arr3) */
+
+//********ARROW FUNCTION*******
+/*
+const saludar = function(){
+    console.log("hola")
+}
+saludar() */
+
+//ARROW
+/*
+const saludar = nombre => console.log("Esto es una funcion flecha");
+saludar();
+//RETUNR IMPLICITO
+const sumar = (a, b) => a + b;
+console.log(sumar(2,2));
+
+//VARIAS LINEAS
+
+const VariasLineas = () => {
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+}
+VariasLineas()
+
+
+const numeros = [1,2,3,4,5];
+
+numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+
+const greeting = {
+    nombre:"MAnuel",
+    saludar:function(){
+        console.log(this.nombre)
+    }
+}
+greeting.saludar() */
+
+//*********PROTOTIPOS************
+/*
+//mala practica
+const animal = {
+    nombre: "Manuel",
+    sonar(){
+        console.log("Estoy vivo")
+    }
+}
+
+const animal2 = {
+    nombre: "Bunny",
+    sonar(){
+        console.log("Estoy vivo")
+    }
+}
+
+console.log(animal) */
+
+//Funcion constructora
+/*
+//primera version , ocupando mas memoria al no ser eficiente con los metodos
+function Animal(nombre,genero){
+//atributos
+    this.nombre = nombre;
+    this.genero = genero;
+//metodos
+    this.sonar = function(nombre,genero){
+        console.log("Estoy vivo")
+    }
+    this.saludar = function(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    }
+};*/
+
+//SEGUNDA VERSIOM OPTIMIZADA
+/*
+//Funcion constructora donde asignamos los metodos al prototipo no a la funcion como tal.
+function Animal(nombre,genero){
+//atributos
+    this.nombre = nombre;
+    this.genero = genero;
+}
+//metodos, aqui this es window, metodos agregados al prototipo de la funcion constructora
+Animal.prototype.sonar = function(nombre,genero){
+        console.log("Estoy vivo")
+    }
+Animal.prototype.saludar = function(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    }
 
 
 
+const cartoon = new Animal("snoopy","masculino"),
+cartoonW = new Animal("Lola", "Femenino");
 
-
+console.log(cartoon.nombre,cartoon.genero)
+console.log(cartoonW.nombre,cartoonW.genero)
+console.log(cartoon)
+console.log(cartoonW)
+cartoon.saludar();
+cartoonW.saludar(); */
 
 
 
