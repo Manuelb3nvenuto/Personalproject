@@ -566,6 +566,49 @@ cartoon.caricatura();
 cartoonW.saludar();
 cartoonW.sonar(); */
 
+//**************CLASES Y HERENCIAS******************
+//Funcion constructora
+/*
+class Animal{
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+//metodos
+    sonar(nombre,genero){
+        console.log("Estoy vivo")
+    }
+    saludar(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    }
+}
+
+class Herencia extends Animal{
+    constructor(nombre,genero,tamanho){
+    super(nombre,genero);
+    this.tamanho = tamanho;
+    }
+    sonar(){
+        console.log("soy un animal y hago este sonido")
+    }
+    hablar(){
+        console.log("GUAAAA GUAAAAAA")
+    }
+}
+
+const buker = new Animal("bunker", "masculino"),
+    vilk = new Herencia("mimi","femenino", "Gigante");
+
+console.log(buker)
+console.log(vilk)
+
+buker.saludar()
+buker.sonar()
+
+vilk.hablar()
+vilk.sonar() */
+
+//***********METODOS ESTATICOS, GETTERS & SETTERS************
 
 
 
