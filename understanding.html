@@ -610,9 +610,65 @@ vilk.sonar() */
 
 //***********METODOS ESTATICOS, GETTERS & SETTERS************
 
+//Funcion constructora
 
+class Animal{
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+//metodos
+    sonar(nombre,genero){
+        console.log("Estoy vivo")
+    }
+    saludar(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    }
+}
 
+class Herencia extends Animal{
+    constructor(nombre,genero,tamanho){
+    super(nombre,genero);
+    this.tamanho = tamanho;
+    this.raza = null;
+    }
+    sonar(){
+        console.log("soy un animal y hago este sonido")
+    }
+    hablar(){
+        console.log("GUAAAA GUAAAAAA")
+    }
 
+    static queEres(){
+        console.log("Los mamíferos (Mammalia) son una clase de animales vertebrados amniotas homeotermos que poseen glándulas mamarias productoras de leche con las que alimentan a las crías")
+    }
+
+    get getRaza(){
+        return this.raza;
+    }
+
+    set setRaza(raza){
+        this.raza = raza;
+    }
+}
+
+const buker = new Herencia("bunker", "masculino"),
+    vilk = new Animal("mimi","femenino", "Gigante");
+
+console.log(buker)
+console.log(vilk)
+
+buker.saludar()
+buker.sonar()
+
+vilk.saludar()
+vilk.sonar() 
+
+Herencia.queEres();
+
+console.log(buker.getRaza);
+buker.setRaza = "Pitbull";
+console.log(buker.getRaza);
 
 
 
