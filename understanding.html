@@ -505,6 +505,68 @@ console.log(cartoonW)
 cartoon.saludar();
 cartoonW.saludar(); */
 
+//**************HERENCIA PROTOTIPICOS****************
+/*
+function Animal(nombre,genero){
+//atributos
+    this.nombre = nombre;
+    this.genero = genero;
+}
+//metodos, aqui this es window, metodos agregados al prototipo de la funcion constructora
+Animal.prototype.sonar = function(nombre,genero){
+        console.log("Estoy viva")
+    }
+Animal.prototype.saludar = function(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    };
+//Herencia prototipica, la de abajo es la funcion constructora
+
+function Mamifero(nombre,genero,tamanho){
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanho = tamanho;
+}
+
+//Mamiferos esta heredando de Animal
+Mamifero.prototype = new Animal();
+Mamifero.prototype.constructor = Mamifero;
+
+//sobreescritura de metodos padre en el hijo
+
+Mamifero.prototype.sonar = function(){
+    console.log("soy un mamifero y mi SONAR es un ladrido");
+}
+
+Mamifero.prototype.saludar = function(){
+    console.log("estoy haciendo sonidos de mamifero");
+}
+
+Mamifero.prototype.caricatura = function(){
+    console.log("SOY UNA CARICATURA");
+}
+
+
+
+
+
+
+const cartoon = new Mamifero("snoopy","masculino", "mediano"),
+cartoonW = new Animal("Lola", "Femenino");
+
+console.log(cartoon.nombre,cartoon.genero, cartoon.tamanho)
+console.log(cartoonW.nombre,cartoonW.genero)
+console.log(cartoon)
+console.log(cartoonW)
+
+cartoon.saludar();
+cartoon.sonar();
+cartoon.caricatura();
+
+
+cartoonW.saludar();
+cartoonW.sonar(); */
+
+
 
 
 
