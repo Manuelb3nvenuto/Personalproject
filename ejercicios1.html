@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Basicos</title>
+</head>
+<body>
+    <script>
+        function contador(frase){
+            console.log(frase.length)
+        }
+
+        contador("Hola mundo");
+
+
+
+        // function cortado() {
+        // let palabra = "hola mundo";
+        // return palabra.substring(0, 3);
+        // }
+
+        // console.log(cortado());
+
+
+        function cortado(cadena, inicio, fin) {
+        return cadena.substring(inicio, fin);
+        }
+
+        let resultado = cortado("hola mundo", 0, 10);
+        console.log(resultado);
+
+
+
+
+
+    </script>
+</body>
+</html>
