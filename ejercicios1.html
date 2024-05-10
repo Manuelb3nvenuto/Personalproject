@@ -160,6 +160,72 @@
 //     }
 // }
 
+// let n = 0;
+
+// while (n <= 10) {
+//     n++;
+//     console.log(n); // never executed
+    
+// }
+
+// do {
+//     n++;
+//     console.log(n); // executed once
+// } while (n <= 10);
+
+
+// let n = 0; // Inicializamos n como 0
+
+// do {
+//     n++; // Incrementamos n en 1 en cada iteración
+//     console.log(n); // Mostramos el valor actual de n en la consola
+// } while (n < 10); // El bucle se ejecutará mientras n sea menor que 10
+
+//con do while
+// let c = 101;
+
+// do {
+//     c--;
+//     console.log(c)
+// }while(c >= 0)
+
+//con for loop
+
+// for(let i = 100; i >=0; --i){
+//     console.log(i)
+// }
+
+
+// let x = 100;
+// if (x < 100)
+//     x = 20;
+// console.log(x);
+
+
+
+
+// if (counter <= 10 && show === false) {
+//     console.log("test");
+// }
+
+let a = 100, b = 200, c = 300;
+
+function test(a) {
+    let b = 10;
+    console.log(a); // parameter a
+    console.log(b); // local variable b
+    console.log(c); // global variable c
+}
+
+test(1);   // -> 1
+    // -> 10
+    // -> 300
+
+console.log(a); // -> 100
+console.log(b); // -> 200
+console.log(c); // -> 300
+
+
 
 
 
