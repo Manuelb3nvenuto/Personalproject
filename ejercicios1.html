@@ -208,28 +208,143 @@
 //     console.log("test");
 // }
 
-let a = 100, b = 200, c = 300;
+// let a = 100, b = 200, c = 300;
 
-function test(a) {
-    let b = 10;
-    console.log(a); // parameter a
-    console.log(b); // local variable b
-    console.log(c); // global variable c
+// function test(a) {
+//     let b = 10;
+//     console.log(a); // parameter a
+//     console.log(b); // local variable b
+//     console.log(c); // global variable c
+// }
+
+// test(1);   // -> 1
+//     // -> 10
+//     // -> 300
+
+// console.log(a); // -> 100
+// console.log(b); // -> 200
+// console.log(c); // -> 300
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+
+// function operation(func, first, second) {
+//     return func(first, second);
+// }
+
+// console.log(operation(add, 10, 20)); // -> 30
+// console.log(operation(multiply, 10, 20)); // -> 200
+
+
+//********Problema numero 1 Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10. ********
+// function contador(frase){
+//     console.log(frase.length)
+// }
+
+// contador("Hola mundo");
+
+//******Problema 2 Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"******
+
+// function cortado() {
+// let palabra = "hola mundo";
+// return palabra.substring(0, 4);
+// }
+
+// console.log(cortado());
+
+//*****Problema 3:Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].*****
+
+// function separar(texto,guion){
+//     return texto.split(guion);
+// }
+// let texto = "Hola, como estas?";
+// let guion = "  ";
+// console.log(separar(texto, ' ' ))
+
+// function separar(texto, caracter) {
+//     return texto.split(caracter);
+// }
+
+// // Ejemplo de uso:
+// let texto = "Hola Como estas ?";
+// let separado = separar(texto, ' ');
+// console.log(separado); // Debería imprimir: ['Hola', 'Como', 'estas', '?']
+
+//*****Problema 4:Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*****
+// function repetir(){
+//     x = console.log('Hola mundo','Hola mundo','Hola mundo' )
+//     if (x >= 3){
+//         console.log("hola mundo")
+//     }else(console.log)
+// };
+//errores: La función repetir() no toma ningún argumento, pero luego intentas llamarla con un argumento repetir(3). Esto provocará un error ya que la función no espera argumentos.
+
+//Estás asignando x a console.log('Hola mundo','Hola mundo','Hola mundo' ), pero console.log() devuelve undefined, por lo que x será undefined.
+
+//La condición if (x >= 3) nunca se cumplirá porque x siempre será undefined.
+
+//La sintaxis else(console.log) es incorrecta. Deberías especificar una condición después de else.
+
+//La comparación if (x >= 3) parece intentar contar cuántas veces se ha impreso "Hola mundo", pero console.log() no devuelve un valor que puedas usar para contar las veces que se ha llamado.
+
+// repetir(3)
+//********esta es la correcta de la numero 4********
+// function repeticones(veces){
+//     for (let x = 0; x < veces ; x++)
+//     console.log("hola mundo");
+// }
+// repeticones(3)
+
+
+
+// function test(counter) {
+//     console.log("test");
+// if (counter > 0)
+//     test(--counter);
+// }
+
+// test(3);
+
+
+// console.log(test())
+
+
+// let x = 10;
+
+// function test() {
+//     let x = 20;
+//     console.log(x);
+// }
+// test()
+
+
+let id = "100";
+{
+let id = 200;
+id = id + 1;
+console.log(id);
 }
 
-test(1);   // -> 1
-    // -> 10
-    // -> 300
-
-console.log(a); // -> 100
-console.log(b); // -> 200
-console.log(c); // -> 300
 
 
 
 
 
 
-    </script>
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
