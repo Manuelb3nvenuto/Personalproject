@@ -242,11 +242,23 @@
 
 
 //********Problema numero 1 Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10. ********
-// function contador(frase){
-//     console.log(frase.length)
+//declarada
+// function contar(palabra = ""){
+//     if(!palabra){
+//         console.warn("no ingresaste ninguna cadena broski")
+//     }else{
+//         console.log(`la cadena ${palabra}, es igual a ${palabra.length} caracteres` )
+//     }
 // }
+// contar("Hola mundo")
 
-// contador("Hola mundo");
+//****with arrow function o expresadas*********
+const contar = (palabra = "") => 
+(!palabra) 
+    ? console.warn("no ingresaste ninguna cadena broski") 
+    : console.log(`la cadena ${palabra}, es igual a ${palabra.length} caracteres`);
+    contar("Hola mundo")
+
 
 //******Problema 2 Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"******
 
@@ -323,12 +335,41 @@
 // test()
 
 
-let id = "100";
-{
-let id = 200;
-id = id + 1;
-console.log(id);
-}
+// let id = "100";
+// {
+// let id = 200;
+// id = id + 1;
+// console.log(id);
+// }
+
+//****Ejercicio #5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".****
+// function revert(palabra) {
+//     //Convertir la cadena a un array de caracteres, revertir el orden y luego unirlos nuevamente en una cadena
+//     const reversed = palabra.split("").reverse().join("");
+//     //Convertir la cadena revertida a un array de caracteres, ordenarlos y luego unirlos nuevamente en una cadena
+//     const orden = reversed.split("").join("");
+//     return orden;
+// }
+
+// var palabra = "ejemplo";
+// console.log(revert(palabra)); 
+
+// //****Ejercicio #6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.****
+// function counter(veces){
+//     const array1 = ["Hola mundo adios mundo"]
+//     const words = array1[0].split(" ");
+//     const contar = words.filter(word => word === "mundo").length;
+//     return counter
+// }
+
+// counter()
+
+//****Ejercicio #7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.****
+
+
+
+//****Ejercicio #8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.****
+
 
 
 
