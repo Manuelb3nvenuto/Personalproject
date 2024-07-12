@@ -253,47 +253,57 @@
 // contar("Hola mundo")
 
 //****with arrow function o expresadas*********
-const contar = (palabra = "") => 
+/* const contar = (palabra = "") => 
 (!palabra) 
     ? console.warn("no ingresaste ninguna cadena broski") 
     : console.log(`la cadena ${palabra}, es igual a ${palabra.length} caracteres`);
-    contar("Hola mundo")
+    contar("Hola mundo") */
 
 
 //******Problema 2 Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"******
+/*
+    function cortado() {
+        let palabra = "hola mundo";
+        return palabra.substring(0, 4);
+    }
 
-// function cortado() {
-// let palabra = "hola mundo";
-// return palabra.substring(0, 4);
-// }
-
-// console.log(cortado());
-
+    console.log(cortado());
+*/
 //*****Problema 3:Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].*****
+/*
+const palabra = (cadena = " ", separador = undefined) =>
+(!cadena)
+? console.warn("no escribiste nada")
+:(separador === undefined)
+? console.warn("no ingresaste el caracter separador")
+: console.info(cadena.split(separador));
 
-// function separar(texto,guion){
-//     return texto.split(guion);
-// }
-// let texto = "Hola, como estas?";
-// let guion = "  ";
-// console.log(separar(texto, ' ' ))
-
-// function separar(texto, caracter) {
-//     return texto.split(caracter);
-// }
-
-// // Ejemplo de uso:
-// let texto = "Hola Como estas ?";
-// let separado = separar(texto, ' ');
-// console.log(separado); // Debería imprimir: ['Hola', 'Como', 'estas', '?']
+palabra("Hola mundo"," ");
+palabra(); */
 
 //*****Problema 4:Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*****
-// function repetir(){
-//     x = console.log('Hola mundo','Hola mundo','Hola mundo' )
-//     if (x >= 3){
-//         console.log("hola mundo")
-//     }else(console.log)
-// };
+/*
+const repetirPalabra = (palabra = " ",number = undefined) => {
+    if (!palabra) return console.warn("no has escrito nada");
+
+    if (number === undefined) return console.warn("Debes ingresar las veces a repetir");
+
+    if (number === 0) return console.warn("El numero de veces no puede ser 0");
+
+    if(Math.sign(number) === -1) return console.error("El numero no puede ser negativo");
+    //se acomoda asi el forloop porque es solo una sola linea de codigo
+    for (let i = 1; i<=number; i++) console.info(`${palabra}, ${i}`)
+    }
+repetirPalabra("Hola mundo",3);
+
+repetirPalabra("Hola mundo",-1);
+
+repetirPalabra("Hola mundo",0);
+
+repetirPalabra("",3);
+
+repetirPalabra("Hola mundo",);
+*/
 //errores: La función repetir() no toma ningún argumento, pero luego intentas llamarla con un argumento repetir(3). Esto provocará un error ya que la función no espera argumentos.
 
 //Estás asignando x a console.log('Hola mundo','Hola mundo','Hola mundo' ), pero console.log() devuelve undefined, por lo que x será undefined.
