@@ -363,21 +363,65 @@ repetirPalabra("Hola mundo",);
 
 // var palabra = "ejemplo";
 // console.log(revert(palabra)); 
+/*
+const revertirCadena = (palabra = " ") => {
+    (palabra)
+    ? console.warn("No has escrito ninguna palabra")
+    : console.log(palabra.split("").reverse().join(""))
+}
+revertirCadena("sara")
 
-// //****Ejercicio #6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.****
+const reversion = (palabra = " ") => {
+    (palabra)
+    ? console.log(palabra.split("").reverse().join(""))
+    : palabra
+}
+reversion("isisisiisis")
+*/
+//****Ejercicio #6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.****
 // function counter(veces){
 //     const array1 = ["Hola mundo adios mundo"]
 //     const words = array1[0].split(" ");
 //     const contar = words.filter(word => word === "mundo").length;
 //     return counter
 // }
+/*
+const contar = (cadena = " ", palabra = " ") => {
+    if(!cadena) return console.warn("No has escrito el texto");
+    if(!palabra) return console.warn("no ingresaste la cadena a evaluar");
 
+    let i = 0;
+    contador = 0;
+    while(i !== -1 ){
+        i = cadena.indexOf(palabra,i);
+        if (i !==-1){
+            i++;
+            contador++;
+        }
+    }
+    return console.info(`la palabra ${palabra} se repite ${contador} veces`)
+}
+
+contar("hola mundo, mi mundo, eres mi mundo"," mundo")
+*/
 // counter()
 
 //****Ejercicio #7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.****
 
+const palimdromo = (palabra = "") => {
+    if(!palabra) return console.log("Esa ni en pedo es una palabra bro");
 
+    palabra = palabra.toLowerCase();
 
+    let reversa = palabra.split("").reverse().join("")
+    return (palabra === reversa) 
+    ? console.info(`esta es la palabra dada es "${palabra}" y como es palindroma esta es su reversa "${reversa}"`)
+    : console.info(`Esa no es palindromo , la palabra dada "${palabra}" y por lo tanto no tiene reversa`);
+}
+
+palimdromo()
+palimdromo("Hola mundo")
+palimdromo("salas")
 //****Ejercicio #8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.****
 
 
