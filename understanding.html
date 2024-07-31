@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undertanding ALL </title>
+    <title> Basic Js </title>
 </head>
 <body>
     <script>
@@ -351,15 +351,19 @@ let persona = {
 let {nombre,apellido,edad} = persona;
 console.log(nombre,apellido,edad); */
 
-//*********LITERAL OBJECTS**************
+//*********OBJETOS LITERALES**************
+//Dentro de un objeto las variables se les van a llamar atributos y a las funciones se les llama metodos
 
+//Se definen en una parte del objeto y se pueden poder llegar a reutilizar en casao de crear otro de estos
 /*
 let nombre = "Manuel",
 edad = 21;
+etnia = " ";
 
 const saludo = {
     nombre:nombre,
     edad: edad,
+    etnia: etnia,
     saludar(){
         console.log("Como estas amigo?")
     }
@@ -371,16 +375,61 @@ saludo.saludar();
 const greeting = {
     nombre,
     edad,
-    raza:"hispanic",
+    etnia:"hispanico",
+    //declaracion de metodos en objetos literales
     greet(){
         console.log("Como estas amigo de mi amigo?")
     }
 }
-
 console.log(greeting)
-greeting.greet(); */
+greeting.greet();
+*/
+
+
+
+/*
+const Manolo = {
+    pasatiempo: ["caminar, correr, comer, leer, codear"],
+    estatura: 1.87,
+    peso: "88 kg",
+    contacto:{
+        gmail:"manuelleirars1323211@gmailocm",
+        tel: 12323123123214,
+        socials: 231321312,
+    },
+    presentacion(){
+        console.log("Hola mi nombre es Manuel pero me llaman Manolo");
+    },
+    llamada(){
+        console.log(`Hola mi nombre es manuel y mis pasatiempos son ${this.pasatiempo} y mi estatura es ${this.estatura}, mis contactos son ${this.socials}`);
+    }
+}
+console.log(Manolo["estatura"]); 
+console.log(Manolo.peso); 
+console.log(Manolo.contacto.gmail);
+
+Manolo.presentacion();
+Manolo.llamada();
+*/
 
 //***********PARAMETROS REST**************
+/*
+function sumar(a,b,...c){
+    let resultado = a + b ;
+
+    c.forEach(function (n){
+        resultado += n
+    });
+
+    return resultado
+}
+
+console.log(sumar(1,2));
+console.log(sumar(1,2,3));
+console.log(sumar(1,2,3,4));
+console.log(sumar(1,2,3,4,5));
+console.log(sumar(1,2,3,4,5,6));
+console.log(sumar(1,2,3,4,5,6,7));
 /*
 function sumar (a,b,...c){
     let resultado = a + b;
@@ -396,6 +445,7 @@ console.log(sumar(1,2,3,4,5))
 console.log(sumar(1,2,3,4,5,6))
 console.log(sumar(1,2,3,4,5,6,7))
 
+//************SPREAD OPERATOR************
 const arr1 = [1,2,3,4,5],
 arr2 = [6,7,8,9,10]
 
@@ -406,17 +456,22 @@ const arr3 = [...arr1,...arr2]
 console.log(arr3) */
 
 //********ARROW FUNCTION*******
+
+//nueva forma de definir una funcion anonima
 /*
 const saludar = function(){
     console.log("hola")
 }
-saludar() */
-
+saludar() 
+*/
 //ARROW
 /*
+const saludo = () => console.log ("Hola de nuevo por tercera vez")
 const saludar = nombre => console.log("Esto es una funcion flecha");
 saludar();
-//RETUNR IMPLICITO
+saludo();
+
+//RETURN IMPLICITO
 const sumar = (a, b) => a + b;
 console.log(sumar(2,2));
 
@@ -440,8 +495,8 @@ const greeting = {
         console.log(this.nombre)
     }
 }
-greeting.saludar() */
-
+greeting.saludar() 
+*/
 //*********PROTOTIPOS************
 /*
 //mala practica
