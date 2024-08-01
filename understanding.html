@@ -498,23 +498,26 @@ const greeting = {
 greeting.saludar() 
 */
 //*********PROTOTIPOS************
-/*
+//el prototipo mas primario y primitivo que tiene js.
+
 //mala practica
+/*
 const animal = {
     nombre: "Manuel",
     sonar(){
-        console.log("Estoy vivo")
+        console.log("Estoy vivo y hablo")
     }
 }
 
 const animal2 = {
     nombre: "Bunny",
     sonar(){
-        console.log("Estoy vivo")
+        console.log("Estoy vivo y salto")
     }
 }
 
-console.log(animal) */
+console.log(animal.sonar()) 
+*/
 
 //Funcion constructora
 /*
@@ -525,12 +528,14 @@ function Animal(nombre,genero){
     this.genero = genero;
 //metodos
     this.sonar = function(nombre,genero){
-        console.log("Estoy vivo")
+        console.log("Estoy vivo y hago sonidos")
     }
     this.saludar = function(){
         console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
     }
-};*/
+};
+
+*/
 
 //SEGUNDA VERSIOM OPTIMIZADA
 /*
@@ -561,7 +566,7 @@ cartoon.saludar();
 cartoonW.saludar(); */
 
 //**************HERENCIA PROTOTIPICOS****************
-/*
+
 function Animal(nombre,genero){
 //atributos
     this.nombre = nombre;
@@ -600,11 +605,6 @@ Mamifero.prototype.caricatura = function(){
     console.log("SOY UNA CARICATURA");
 }
 
-
-
-
-
-
 const cartoon = new Mamifero("snoopy","masculino", "mediano"),
 cartoonW = new Animal("Lola", "Femenino");
 
@@ -619,7 +619,81 @@ cartoon.caricatura();
 
 
 cartoonW.saludar();
-cartoonW.sonar(); */
+cartoonW.sonar(); 
+
+//**************PROPIA HERENCIA PROTOTIPICA**************
+//se comienza con una funcion donde se le insertan los parametros a utilizar con el uso del THIS
+function Familia(name,lastname,edad,arbol){
+    //se hace de esa manera para poder almacenar de manera propia el texto
+    this.name = name;
+    this.lastname = lastname;
+    this.edad = edad;
+    this.arbol = arbol;
+}
+
+
+//se ponen los metodos por hacer pero los almacenaremos en el prototypo para poder asi mejorar y reducir la memoria por utilizar
+
+Familia.prototype.presentacion = function(){
+    console.log(`Hola mi nombre es ${this.name} y mi apellido es ${this.lastname} y soy parte de tu familia`);
+}
+
+Familia.prototype.lugar = function() {
+    console.log(`Hola soy ${this.name } ${this.lastname}  y tengo este lugar en tu ${this.arbol} arbol genealogico`);
+}
+
+Familia.prototype.age = function() {
+    console.log(`Hola soy ${this.name } ${this.lastname} y tengo esta edad: ${this.edad} y formo parte de tu arbol genealogico`);
+}
+
+// Crear instancias de Familia
+const abuelos = new Familia("Manuel", "Rivera", 20, "Hermano");
+const jovenes = new Familia("Renata", "Rivera", 19, "Hermana");
+
+// Llamar a los métodos en las instancias
+abuelos.presentacion(); // Llamar al método 'presentacion' de la instancia 'abuelos'
+abuelos.lugar(); // Llamar al método 'lugar' de la instancia 'abuelos'
+abuelos.age(); // Llamar al método 'age' de la instancia 'abuelos'
+
+// Si deseas llamar a métodos de una instancia específica, usa esa instancia
+jovenes.presentacion();
+jovenes.lugar();
+jovenes.age();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //**************CLASES Y HERENCIAS******************
 //Funcion constructora
