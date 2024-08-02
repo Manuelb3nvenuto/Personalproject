@@ -566,7 +566,7 @@ cartoon.saludar();
 cartoonW.saludar(); */
 
 //**************HERENCIA PROTOTIPICOS****************
-
+/*
 function Animal(nombre,genero){
 //atributos
     this.nombre = nombre;
@@ -620,8 +620,9 @@ cartoon.caricatura();
 
 cartoonW.saludar();
 cartoonW.sonar(); 
-
-//**************PROPIA HERENCIA PROTOTIPICA**************
+*/
+//**************PROPIA HERENCIA**************
+/*
 //se comienza con una funcion donde se le insertan los parametros a utilizar con el uso del THIS
 function Familia(name,lastname,edad,arbol){
     //se hace de esa manera para poder almacenar de manera propia el texto
@@ -631,15 +632,37 @@ function Familia(name,lastname,edad,arbol){
     this.arbol = arbol;
 }
 
+Familia.prototype.sonido = function(nombre,genero){
+        console.log("Estoy viva")
+    }
+Familia.prototype.llamar = function(){
+        console.log(`hola me llamo ${this.nombre}, y soy ${this.genero}`)
+    };
+
+//se crea la funcion con las propiedades que se agregen o se mantengan
+function animales(name,lastname,edad,arbol,tipo){
+    this.super = Familia;
+    this.super(name,lastname,edad,arbol);
+    this.tipo = tipo;
+}
+//Hereda las propiedades 
+
+animales.prototype = new Familia();
+animales.prototype.constructor = mascota;
 
 //se ponen los metodos por hacer pero los almacenaremos en el prototypo para poder asi mejorar y reducir la memoria por utilizar
+
+
+animales.prototype.sonido = function(){
+    console.log(`Hola soy nuevo y mi nombre es ${this.nombre} y tengo ${edad}, tambien soy un ${this.tipo} `)
+}
 
 Familia.prototype.presentacion = function(){
     console.log(`Hola mi nombre es ${this.name} y mi apellido es ${this.lastname} y soy parte de tu familia`);
 }
 
 Familia.prototype.lugar = function() {
-    console.log(`Hola soy ${this.name } ${this.lastname}  y tengo este lugar en tu ${this.arbol} arbol genealogico`);
+    console.log(`Hola soy ${this.name } ${this.lastname}  y tengo este lugar de "${this.arbol}" en tu arbol genealogico`);
 }
 
 Familia.prototype.age = function() {
@@ -647,10 +670,16 @@ Familia.prototype.age = function() {
 }
 
 // Crear instancias de Familia
-const abuelos = new Familia("Manuel", "Rivera", 20, "Hermano");
-const jovenes = new Familia("Renata", "Rivera", 19, "Hermana");
+const abuelos = new Familia("Manuel", "Rivera", 20, "Hermano"),
+jovenes = new Familia("Renata", "Rivera", 19, "Hermana"),
+animales = new mascota("PERROTE","7 anhos perrunos","soy un perro chihuahua");
 
 // Llamar a los métodos en las instancias
+
+animales.sonido();
+*/
+
+/*
 abuelos.presentacion(); // Llamar al método 'presentacion' de la instancia 'abuelos'
 abuelos.lugar(); // Llamar al método 'lugar' de la instancia 'abuelos'
 abuelos.age(); // Llamar al método 'age' de la instancia 'abuelos'
@@ -659,41 +688,7 @@ abuelos.age(); // Llamar al método 'age' de la instancia 'abuelos'
 jovenes.presentacion();
 jovenes.lugar();
 jovenes.age();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 //**************CLASES Y HERENCIAS******************
 //Funcion constructora
@@ -714,30 +709,37 @@ class Animal{
 
 class Herencia extends Animal{
     constructor(nombre,genero,tamanho){
-    super(nombre,genero);
+    super(nombre,genero); //es un constructor que manda a llamar el constructor de la clase padre 
     this.tamanho = tamanho;
     }
     sonar(){
         console.log("soy un animal y hago este sonido")
     }
     hablar(){
-        console.log("GUAAAA GUAAAAAA")
+        console.log(`GUAAAA GUAAAAAA ${this.genero}`)
+    }
+
+    mazorca(){
+        console.log(`hola soy un ${this.nombre} y mi genero es ${this.genero} y de tamanho soy ${this.tamanho}`)
     }
 }
 
 const buker = new Animal("bunker", "masculino"),
-    vilk = new Herencia("mimi","femenino", "Gigante");
+    cachorro = new Herencia("cachorrito","masculino", "Gigante");
 
 console.log(buker)
-console.log(vilk)
+console.log(cachorro)
 
 buker.saludar()
 buker.sonar()
 
-vilk.hablar()
-vilk.sonar() */
-
+cachorro.hablar()
+cachorro.sonar() 
+cachorro.mazorca()
+*/
 //***********METODOS ESTATICOS, GETTERS & SETTERS************
+
+
 
 //Funcion constructora
 /*
@@ -760,6 +762,7 @@ class Herencia extends Animal{
     super(nombre,genero);
     this.tamanho = tamanho;
     this.raza = null;
+    this.sabor = null;
     }
     sonar(){
         console.log("soy un animal y hago este sonido")
@@ -767,28 +770,42 @@ class Herencia extends Animal{
     hablar(){
         console.log("GUAAAA GUAAAAAA")
     }
-
+    comer(){
+        console.log("Me estoy comiendo una deliciosa galleta de chocolat")
+    }
+//los setters and getters son metodos especiales que nos permiten establecer y obetener valores y atributos de nuestra clasem 
     static queEres(){
         console.log("Los mamíferos (Mammalia) son una clase de animales vertebrados amniotas homeotermos que poseen glándulas mamarias productoras de leche con las que alimentan a las crías")
     }
-
+    //metodo obtenedor
     get getRaza(){
         return this.raza;
     }
-
+    //metodo establecedor que modifica la propiedad, como se establece nuevo valor se necesita un parametro que se va a ocupar
     set setRaza(raza){
         this.raza = raza;
     }
+    get getSabor(){
+        return this.sabor;
+    }
+
+    set setSabor(sabor){
+        return this.sabor = sabor;
+    }
+    //son metodos pero se utilizan como atributos 
 }
 
 const buker = new Herencia("bunker", "masculino"),
-    vilk = new Animal("mimi","femenino", "Gigante");
+    vilk = new Animal("mimi","femenino", "Gigante"),
+    vilam = new Herencia("PERRON", "Masculino", "MEDIANO")
 
 console.log(buker)
 console.log(vilk)
 
 buker.saludar()
 buker.sonar()
+
+buker.comer()
 
 vilk.saludar()
 vilk.sonar() 
@@ -797,7 +814,15 @@ Herencia.queEres();
 
 console.log(buker.getRaza);
 buker.setRaza = "Pitbull";
-console.log(buker.getRaza); */
+console.log(buker.getRaza); 
+
+console.log(vilam.getSabor);
+vilam.setSabor = "CHOCOLATTTTuuuu"
+console.log(vilam.getSabor)
+*/
+
+
+
 
 //**********CONSOLE OBJECT*************
 /*
