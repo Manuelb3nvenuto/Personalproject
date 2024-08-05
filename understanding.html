@@ -709,7 +709,7 @@ class Animal{
 
 class Herencia extends Animal{
     constructor(nombre,genero,tamanho){
-    super(nombre,genero); //es un constructor que manda a llamar el constructor de la clase padre 
+    super(nombre,genero); //es un constructor que manda a llamar el constructor de la clase padre y el que se seleccione pueda heredar    
     this.tamanho = tamanho;
     }
     sonar(){
@@ -742,13 +742,14 @@ cachorro.mazorca()
 
 
 //Funcion constructora
-/*
+
 class Animal{
+    //el constructor de una clase es un metood especial que se ejecuta al momento de instanciar la clase
     constructor(nombre,genero){
         this.nombre = nombre;
         this.genero = genero;
     }
-//metodos
+//metodos, en caso de necesitar parametros se les ponen
     sonar(nombre,genero){
         console.log("Estoy vivo")
     }
@@ -773,7 +774,9 @@ class Herencia extends Animal{
     comer(){
         console.log("Me estoy comiendo una deliciosa galleta de chocolat")
     }
-//los setters and getters son metodos especiales que nos permiten establecer y obetener valores y atributos de nuestra clasem 
+    //STATIC se ejecuta sin la necesidad de haber creado un objeto del tipo al que pertenece la clase
+
+    //los setters and getters son metodos especiales que nos permiten establecer y obetener valores y atributos de nuestra clasem 
     static queEres(){
         console.log("Los mamíferos (Mammalia) son una clase de animales vertebrados amniotas homeotermos que poseen glándulas mamarias productoras de leche con las que alimentan a las crías")
     }
@@ -798,7 +801,7 @@ class Herencia extends Animal{
 const buker = new Herencia("bunker", "masculino"),
     vilk = new Animal("mimi","femenino", "Gigante"),
     vilam = new Herencia("PERRON", "Masculino", "MEDIANO")
-
+//se les dice azucar sintactica porque se adaptan el prototipo a las asignaciones nuevas que se incluyan
 console.log(buker)
 console.log(vilk)
 
@@ -819,10 +822,9 @@ console.log(buker.getRaza);
 console.log(vilam.getSabor);
 vilam.setSabor = "CHOCOLATTTTuuuu"
 console.log(vilam.getSabor)
-*/
 
 
-
+//apartir del 2015 deja crear clases, aunque gramatical se haga como clases siguen siendo prototipos\, y se simplifica con las clases
 
 //**********CONSOLE OBJECT*************
 /*
