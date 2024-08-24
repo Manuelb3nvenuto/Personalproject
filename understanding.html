@@ -740,9 +740,8 @@ cachorro.mazorca()
 //***********METODOS ESTATICOS, GETTERS & SETTERS************
 
 
-
 //Funcion constructora
-
+/*
 class Animal{
     //el constructor de una clase es un metood especial que se ejecuta al momento de instanciar la clase
     constructor(nombre,genero){
@@ -822,12 +821,13 @@ console.log(buker.getRaza);
 console.log(vilam.getSabor);
 vilam.setSabor = "CHOCOLATTTTuuuu"
 console.log(vilam.getSabor)
-
+*/
 
 //apartir del 2015 deja crear clases, aunque gramatical se haga como clases siguen siendo prototipos\, y se simplifica con las clases
 
-//**********CONSOLE OBJECT*************
+//**********CONSOLE OBJECT DOM ALV *************
 /*
+
 console.log(console)
 
 console.error("esto es un error");
@@ -843,16 +843,19 @@ edad = 20;
 console.log(nombre,apellido,edad)
 
 console.log(`hola soy ${nombre} ${apellido} y tengo ${edad}`);
-
+//comodines de texto que se pueden acomodar y reemplazar por las variables despues del mensaje de la consola
 console.log(`hola soy %s %s y tengo %d`, nombre,apellido,edad);
 
-console.clear();
+//console.clear();
 
+//ofrece y muestra propiedades a manera de objeto el window
 console.log(window)
-
+//muestra el contenido escrito en el document (DOM) como en HTML
 console.log(document)
-
+//muestra como en el window todas las propiedades 
 console.dir(window)
+//muestra como propiedades y no en forma de HTML
+console.dir(document)
 
 console.group("Los cursos de la vida en general");
 
@@ -887,8 +890,8 @@ const perro = {
 
 console.table(perro);
 
-console.clear();
-
+//console.clear();
+//console time sirver para ver cuanto tarda el codigo en ejecutarse el codigo al momento de iniciarce
 console.time(`tiempo codigo final`);
 
 const arreglo = Array(100);
@@ -900,22 +903,28 @@ for (let i = 0; i > Array.length; i++){
 console.timeEnd("tiempo codigo final")
 console.log(arreglo);
 
+*/
 
-console.clear();
-
+//console.clear();
+/*
 for (let i = 0; i <= 100; i++){
     console.count("codigo for");
     console.log(i);
 }
+*/
+//console.clear();
 
-console.clear();
 
+//Assert es usado para hacer pruebas y usarla para comparar la prueba
+/*
 let x = 2,
 y = 3,
 
 pruebaXY = "Se esperaba que x sea menor a y";
 
-console.assert(x < y, {x,x,pruebaXY}); */
+console.assert(x < y, {x,x,pruebaXY}); 
+*/
+
 
 //***********DATE OBJECT***************
 /*
@@ -995,49 +1004,59 @@ function saludar (nombre){
 console.log()
 saludar("Manuel")
 saludar()
-
 //Cuando el valor de la IZQ tiende a Verdadero, se ira por ese valor
 console.log("cadena" || "valor de la derecha")
 
-console.log(19||"Valor de la derecha")
+/*
+    ]Operador OR (||)
+    El operador `||` devuelve el primer valor que sea "verdadero" (truthy). Si el primer valor es "falso" (falsy), devuelve el segundo valor.
+*/
+/*
+console.log("cadena" || "valor de la derecha");  // Imprime "cadena", ya que "cadena" es truthy
 
-console.log([]||"Tiende a falso")
+console.log(19 || "Valor de la derecha");         // Imprime 19, ya que 19 es truthy
 
-console.log(false||"Cuando es falso ignora el resultado")
+console.log([] || "Tiende a falso");              // Imprime [], ya que [] (un array vacío) es truthy
 
-console.log(null || "Valor de la derecha");
+console.log(false || "Cuando es falso ignora el resultado"); // Imprime "Cuando es falso ignora el resultado", ya que false es falsy
 
-console.log(undefined || "Valor de la derecha");
+console.log(null || "Valor de la derecha");       // Imprime "Valor de la derecha", ya que null es falsy
 
-console.log("" || "Valor de la derecha");
+console.log(undefined || "Valor de la derecha");  // Imprime "Valor de la derecha", ya que undefined es falsy
 
-console.log(-2 || "Valor de la derecha");
+console.log("" || "Valor de la derecha");         // Imprime "Valor de la derecha", ya que "" (cadena vacía) es falsy
 
-console.log(0 || "Valor de la derecha");
+console.log(-2 || "Valor de la derecha");         // Imprime -2, ya que -2 es truthy
 
-//Cuando el valor de && va a buscar valores que tiendan a falso
+console.log(0 || "Valor de la derecha");          // Imprime "Valor de la derecha", ya que 0 es falsy
+*/
+/*
+  Operador AND (&&)
+  El operador `&&` devuelve el primer valor que sea "falso" (falsy). Si todos los valores son truthy, devuelve el último valor.
+*/
+/*
+console.log(false && "Valor de la derecha");     // Imprime false, ya que false es falsy
 
-console.log(false && "Valor de la derecha");
+console.log(null && "Valor de la derecha");      // Imprime null, ya que null es falsy
 
-console.log(null && "Valor de la derecha");
+console.log(undefined && "Valor de la derecha"); // Imprime undefined, ya que undefined es falsy
 
-console.log(undefined && "Valor de la derecha");
+console.log("" && "Valor de la derecha");        // Imprime "", ya que "" es falsy
 
-console.log("" && "Valor de la derecha");
+console.log(-2 && "Valor de la derecha");        // Imprime "Valor de la derecha", ya que -2 es truthy
 
-console.log(-2 && "Valor de la derecha");
+console.log(0 && "Valor de la derecha");         // Imprime 0, ya que 0 es falsy
 
-console.log(0 && "Valor de la derecha");
+console.log("cadena" && "Valor de la derecha");  // Imprime "Valor de la derecha", ya que "cadena" es truthy
 
-console.log("cadena" && "Valor de la derecha");
+console.log(19 && "Valor de la derecha");        // Imprime "Valor de la derecha", ya que 19 es truthy
 
-console.log(19 && "Valor de la derecha");
+console.log(true && "Valor de la derecha");      // Imprime "Valor de la derecha", ya que true es truthy
 
-console.log(true && "Valor de la derecha");
+console.log([] && "Valor de la derecha");        // Imprime "Valor de la derecha", ya que [] es truthy
 
-console.log([] && "Valor de la derecha");
-
-console.log({} && "Valor de la derecha"); */
+console.log({} && "Valor de la derecha");        // Imprime "Valor de la derecha", ya que {} (un objeto vacío) es truthy
+*/
 
 //**********ALERT,CONFIRM Y PROMPT****************
 
