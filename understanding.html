@@ -1276,32 +1276,126 @@ console.log("Depues del clear timeout")
 
 
 //*********ASINCRONIA Y EVENT LOOP*********
+//JS es un lenguaje de un solo hilo, solo ejecuta una sola cosa a la vez
+
+//PROCESAMIENTO SINGLE THREAD Y MULTI THREAD
+/* 
+son unidades basicas de ejecucion que hace la maquina al ejecutar un progrma 
+ */
+
+/* 
+//OPERACIONES DE CPU Y OPERACIONES DE I / O
+
+CPU
+Son aquellas que pasaran mayor tiempo dentro de la CPU en sus procesos, llegan a consumir el dicho CPU
+Input , Output I/O a Js le gusta esta
+Las que van a esperar la peticion de la solicitud que se ha pedido 
+ */
+
+//OPERACIONES CONCURRENTES Y PARALELISMO
+/* 
+La CONCURRENCIA es cuando dos o mas tareas progresan simultaneamente, lo veo como una balanza de acciones tratando de equlibrarse
+
+Mientras que el PARALELISMO cuando dos o mas tareas se ejecutan al mismo tiempo, como una carrera entre las dos acciones, puede que una haya empezado antes y otra despues
+ */
+
+//OPERACIONES BLOQUEANTES Y NO BLOQUEANTES
+/* 
+Se refiere a la fase de espera cada que se ejecuta una operacion de nuestro codigo.
+BLOQUEANTES: Es aquella que no devuelve el control de la operacion hasta que haya acabado dichas tareas
+
+NO BLOQUEANTE: Las que dan control al hilo principal, al momento de ejecutar el dicho programa
+ */
+//OPERACIONES SINCRONAS y ASINCRONAS
+/* 
+SincRONAS: Son las que ocurren en el tiempo inmediato, espera el resultado en el tiempo presente y sigue otra operacion y consecuente.
+
+Asincrona: Sucede en un futuro, se ejecuta y no sabe cuando tendr[a el resultado por eso se asocia , el bloqueante con sincrono y no bloqueante con asincrono.
+ */
+
+//EN JS se maneja distintos codigos
+
+/*CODIGO SINCRONO BLOQUEANTE*/
+/* (() => {
+    console.log("Codigo Sincrono")
+    console.log("Inicio")
+
+    function dos(){
+        console.log("Dos")
+    }
+
+    function uno(){
+        console.log("Uno")
+        dos();
+        console.log("Tres")
+
+    }
+
+    uno();
+    console.log("FIsN")
+})();
+ */
+/* CODIGO ASINCRONO NO BLOQUEANTE*/
+//evita algo que todavia no esta cargado, seria una de su utilidad, porque manda a cola la solicitud (callback) mientras le da prioridad a las inmediatas.  
+/* 
+(() => {
+    console.log("Codigo Asincrono")
+    console.log("Inicio")
+
+    function dos(){
+        setTimeout(function(){
+            console.log("Dos");
+
+        },1000);
+    }
 
 
+        function uno(){
+        setTimeout(function(){//no bloqueantes
+            console.log("Uno");
+        },0);
+        dos();
+        console.log("Tres")//bloqueantes 
+    }
+
+    uno();
+    console.log("Final")
+})();
+ */
 
 
+//CALLBACKS 
 
+function cuadradoCallBack(value,callback){
+    setTimeout(() => {
+        callback(value, value * value);
+    },0 | Math.random() * 100);
+}
+//no se ejecutan hasta que el primero antes de ellos se ejecute, asi evitamos que se adelanten o se vayan cosas
+cuadradoCallBack(0,(value,resultado)=>{
+    console.log("Inicia, Callback"); 
+    console.log(`Callback: ${value}, ${resultado}`)
+    cuadradoCallBack(1,(value,resultado)=>{
+        console.log(`Callback: ${value}, ${resultado}`)
+        cuadradoCallBack(2,(value,resultado)=>{
+            console.log(`Callback: ${value}, ${resultado}`)
+            cuadradoCallBack(3,(value,resultado)=>{
+                console.log(`Callback: ${value}, ${resultado}`)
+                cuadradoCallBack(4,(value,resultado)=>{
+                    console.log(`Callback: ${value}, ${resultado}`)
+                    cuadradoCallBack(5,(value,resultado)=>{
+                        console.log(`Callback: ${value}, ${resultado}`)
+                    })
+                })
+            })
+        })
+    })
+})
+/* 
+Es una funcion que se va a ejecutar despues de que otra lo haga, mecanismo por excelencia para llamar a las funciones, practicamente con las funciones se pueden hacer muchas tipos de cosas con js
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+CALLBACK HELL cuando se anidas demasiadas callbacks
+ */
 
 
 
